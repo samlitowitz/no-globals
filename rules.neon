@@ -1,6 +1,6 @@
 rules:
     - ArtsPeople\PHPStan\Rules\Keywords\GlobalKeywordRule
-    - ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableRule
+    - ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableWriteRule
 
 services:
     -
@@ -9,6 +9,6 @@ services:
             - phpstan.rules.rule
 
     -
-        class: ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableRule
+        class: ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableWriteRule
         tags:
             - phpstan.rules.rule

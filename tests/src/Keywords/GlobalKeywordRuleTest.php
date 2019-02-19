@@ -22,11 +22,11 @@ class GlobalKeywordRuleTest extends RuleTestCase
             ],
             [
                 [
-                    'Variable globalWrite accessed globally',
+                    'Variable $globalWrite accessed globally',
                     3,
                 ],
                 [
-                    'Variable globalWrite accessed globally',
+                    'Variable $globalWrite accessed globally',
                     9,
                 ],
             ]

@@ -29,7 +29,7 @@ class GlobalKeywordRule implements Rule
         $variables = [];
         foreach ($node->vars as $variable) {
             $variables[] = sprintf(
-                "Variable %s accessed globally",
+                'Variable $%s accessed globally',
                 $variable->name
             );
         }

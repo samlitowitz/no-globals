@@ -2,15 +2,15 @@
 
 namespace ArtsPeople\PHPStan\Rules\Variable;
 
-use ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableRule;
+use ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableWriteRule;
 use \PHPStan\Rules\Rule;
 use \PHPStan\Testing\RuleTestCase;
 
-class GlobalsVariableRuleTest extends RuleTestCase
+class GlobalsVariableWriteRuleTest extends RuleTestCase
 {
     protected function getRule(): Rule
     {
-        return new GlobalsVariableRule();
+        return new GlobalsVariableWriteRule();
     }
 
     public function testRule(): void
@@ -22,28 +22,28 @@ class GlobalsVariableRuleTest extends RuleTestCase
             ],
             [
                 [
-                    'Use of $GLOBALS',
-                    9,
+                    'Write to $GLOBALS[\'class_write\']',
+                    9
                 ],
                 [
-                    'Use of $GLOBALS',
-                    10,
+                    'Write to $GLOBALS[\'global_write\']',
+                    3
                 ],
                 [
-                    'Use of $GLOBALS',
-                    3,
+                    'Write to $GLOBALS[\'global_nested\'][\'write\']',
+                    7
                 ],
                 [
-                    'Use of $GLOBALS',
-                    4,
+                    'Write to $GLOBALS[$a]',
+                    10
                 ],
                 [
-                    'Use of $GLOBALS',
-                    9,
+                    'Write to $GLOBALS[$GLOBALS[$a]]',
+                    12
                 ],
                 [
-                    'Use of $GLOBALS',
-                    10,
+                    'Write to $GLOBALS[\'local_write\']',
+                    16
                 ],
             ]
         );
