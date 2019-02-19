@@ -1,0 +1,14 @@
+rules:
+    - ArtsPeople\PHPStan\Rules\Keywords\GlobalKeywordRule
+    - ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableRule
+
+services:
+    -
+        class: ArtsPeople\PHPStan\Rules\Keywords\GlobalKeywordRule
+        tags:
+            - phpstan.rules.rule
+
+    -
+        class: ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableRule
+        tags:
+            - phpstan.rules.rule
