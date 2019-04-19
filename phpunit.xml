@@ -1,0 +1,17 @@
+<phpunit
+    bootstrap="./vendor/autoload.php"
+    backupGlobals="false"
+    colors="true"
+    verbose="true">
+
+    <testsuite name="NoGlobals">
+        <directory>./tests</directory>
+    </testsuite>
+
+    <filter>
+        <whitelist>
+            <file>./src/Keywords/GlobalKeywordRule.php</file>
+            <file>./src/Variables/GlobalsVariableWriteRule.php</file>
+        </whitelist>
+    </filter>
+</phpunit>

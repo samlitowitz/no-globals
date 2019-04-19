@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace ArtsPeople\PHPStan\Rules\Variable;
+namespace SamLitowitz\PHPStan\Rules\Variable;
 
-use ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableWriteRule;
+use SamLitowitz\PHPStan\Rules\Variables\GlobalsVariableWriteRule;
 use \PHPStan\Rules\Rule;
 use \PHPStan\Testing\RuleTestCase;
 

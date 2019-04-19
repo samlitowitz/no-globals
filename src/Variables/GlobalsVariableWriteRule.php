@@ -1,6 +1,6 @@
 <?php
 
-namespace ArtsPeople\PHPStan\Rules\Variables;
+namespace SamLitowitz\PHPStan\Rules\Variables;
 
 use PhpParser\Node;
 use PHPStan\Analyser\Scope;

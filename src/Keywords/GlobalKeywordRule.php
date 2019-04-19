@@ -1,6 +1,6 @@
 <?php
 
-namespace ArtsPeople\PHPStan\Rules\Keywords;
+namespace SamLitowitz\PHPStan\Rules\Keywords;
 
 use PhpParser\Node;
 use PHPStan\Analyser\Scope;
