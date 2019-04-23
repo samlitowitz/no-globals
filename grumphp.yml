@@ -1,0 +1,17 @@
+parameters:
+  tasks:
+    composer:
+    file_size:
+    phpcs:
+      standard: PSR2
+    phpcsfixer:
+      config_file: .php_cs
+    phplint:
+      exclude: ['./vendor']
+    phpmd:
+      exclude: ['./vendor']
+    phpmnd:
+      exclude: ['./vendor']
+    phpstan:
+      configuration: phpstan.neon
+    phpunit:
