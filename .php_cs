@@ -15,6 +15,8 @@
  * adding trailing commas in the last line of an array, etc.
  */
 $finder = PhpCsFixer\Finder::create()
+    ->exclude('tests/src/Keywords/data')
+    ->exclude('tests/src/Variables/data')
     ->exclude('vendor')
     ->in(__DIR__);
 

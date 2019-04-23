@@ -1,5 +1,4 @@
 <?php
-
 namespace SamLitowitz\PHPStan\Rules\Keywords;
 
 use PhpParser\Node;
