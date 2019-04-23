@@ -48,7 +48,7 @@ class GlobalsVariableWriteRule implements Rule
         return false;
     }
 
-    private function expandArrayDimFetch(ArrayDimFetch $node): string
+    private function expandArrayDimFetchVariable(ArrayDimFetch $node): string
     {
         if ($node->var instanceof Variable) {
             $dim = '';
@@ -75,6 +75,15 @@ class GlobalsVariableWriteRule implements Rule
             }
 
             return sprintf('$%s[%s]', $node->var->name, $dim);
+        }
+
+        return '';
+    }
+
+    private function expandArrayDimFetch(ArrayDimFetch $node): string
+    {
+        if ($node->var instanceof Variable) {
+            return $this->expandArrayDimFetchVariable($node);
         } elseif ($node->var instanceof ArrayDimFetch) {
             $expanded = $this->expandArrayDimFetch($node->var);
 
