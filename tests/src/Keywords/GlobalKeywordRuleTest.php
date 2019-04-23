@@ -1,5 +1,5 @@
-<?php declare(strict_types=1);
-
+<?php
+declare(strict_types=1);
 namespace SamLitowitz\PHPStan\Rules\Variable;
 
 use SamLitowitz\PHPStan\Rules\Keywords\GlobalKeywordRule;

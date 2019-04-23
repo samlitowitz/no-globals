@@ -1,3 +1,6 @@
 .*
 !.gitignore
+!.php_cs
+!.travis.yml
 vendor/
+

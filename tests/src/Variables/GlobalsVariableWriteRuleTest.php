@@ -1,5 +1,5 @@
-<?php declare(strict_types=1);
-
+<?php
+declare(strict_types=1);
 namespace SamLitowitz\PHPStan\Rules\Variable;
 
 use SamLitowitz\PHPStan\Rules\Variables\GlobalsVariableWriteRule;
@@ -23,27 +23,27 @@ class GlobalsVariableWriteRuleTest extends RuleTestCase
             [
                 [
                     'Write to $GLOBALS[\'class_write\']',
-                    9
+                    9,
                 ],
                 [
                     'Write to $GLOBALS[\'global_write\']',
-                    3
+                    3,
                 ],
                 [
                     'Write to $GLOBALS[\'global_nested\'][\'write\']',
-                    7
+                    7,
                 ],
                 [
                     'Write to $GLOBALS[$a]',
-                    10
+                    10,
                 ],
                 [
                     'Write to $GLOBALS[$GLOBALS[$a]]',
-                    12
+                    12,
                 ],
                 [
                     'Write to $GLOBALS[\'local_write\']',
-                    16
+                    16,
                 ],
             ]
         );

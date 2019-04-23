@@ -1,14 +1,14 @@
 rules:
-    - ArtsPeople\PHPStan\Rules\Keywords\GlobalKeywordRule
-    - ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableWriteRule
+    - SamLitowitz\PHPStan\Rules\Keywords\GlobalKeywordRule
+    - SamLitowitz\PHPStan\Rules\Variables\GlobalsVariableWriteRule
 
 services:
     -
-        class: ArtsPeople\PHPStan\Rules\Keywords\GlobalKeywordRule
+        class: SamLitowitz\PHPStan\Rules\Keywords\GlobalKeywordRule
         tags:
             - phpstan.rules.rule
 
     -
-        class: ArtsPeople\PHPStan\Rules\Variables\GlobalsVariableWriteRule
+        class: SamLitowitz\PHPStan\Rules\Variables\GlobalsVariableWriteRule
         tags:
             - phpstan.rules.rule
